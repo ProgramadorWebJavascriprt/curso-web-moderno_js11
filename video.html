@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+ <html lang="tp-br">
+     <head>
+         <title> Analisando os assuntos </title>
+         <meta charset="utf-8">
+         <link rel="stylesheet" type="text/css" href="estilo.css">
+         
+        </head>
+   <header>
+    <marquee> html,css e Javascript no curso de Web Moderno seja bem vindo...   </marquee>
+
+   </header>
+   <body>
+  <h1>Videos</h1><br>
+    <h2>Terça-feira,03/08/2021 das 21:35:00 as 22:25:00 h +|- </h2>
+  <video id="meuvideo" width="800px" height="450px" controls  autoplay controlsList="nodownload">
+  <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4" > 
+</video>
+<div wm-progresso="meuvideo" class="progresso">
+    <div></div> 
+</div>
+<div>
+    <button wm-play="meuvideo"> Play </button>
+     <button wm-pause="meuvideo"> Pause </button>
+</div>
+</body>
+<style>
+    .progresso{
+        height: 20px;
+        width: 500px;
+        border: solid 1px #444;
+        margin: 20px;
+    }
+    .progresso > div {
+        background-color: red;
+        color: #fff;
+        height: 100%;
+        text-align:right;
+        font-size: 14px;
+        width: 0%;
+    }
+marquee { font-size: 26px;
+    background-color: aqua;
+    color: black;
+   text-align: justify;
+   font-weight: bold;
+ }
+ .menu ul{
+     margin: 0px;
+     background-color: #7FFFD4;
+     list-style: none;
+     text-align: right;}
+ 
+     .menu ul li{
+       
+       display: inline;
+     }
+      .menu ul li a{
+       padding: 10px 10px;
+       display: inline-block;
+       color: black;
+       text-decoration: none;
+       
+ 
+     }
+      .menu ul li a:hover{
+        color: #D3D3D3;}
+ 
+      .menu ul li a{
+     background-color: aqua;
+     font-family: arial;
+     font-size: 20px;
+     color: blue;
+     text-align: right;
+ }  
+h1 {
+font-family: Arial, Helvetica, sans-serif;
+color:black;
+
+}
+
+h4 
+{
+ font-family: Arial, Helvetica, sans-serif;
+  color:black;
+  font-weight: bold;
+
+ }
+h5{
+ padding: 10px 10px;
+       display: inline-block;
+       color: black;
+       text-decoration: none;
+       font-size: 20px;
+ 
+
+}
+
+.corpo {
+ background-color: cadetblue;
+ text-align: justify;
+ font-weight: bold;
+
+} 
+.texto {
+ background-color: cadetblue;
+ text-align: right;
+ color: black;
+ font-weight: bold;
+ font-size: 20px;
+ 
+} 
+.texto1{
+background-color: cadetblue;
+ text-align: left;
+ color: black;
+ font-weight: bold;
+ font-size: 20px;
+  
+}
+.conteudo{
+background-color: cadetblue;
+text-align: right;
+color: black;
+font-weight: bold;
+font-size: 20px;
+text-decoration: none;
+}
+table{
+  border-collapse: collapse;
+
+}
+th, td{
+ padding: 10px;
+}
+thead tr{
+  border-bottom: solid 3px #444;
+}
+tbody tr:hover {
+ background-color: #dedede;
+}
+tfoot {
+ background-color: #444;
+  color: #fff;
+    font-weight: bold;
+
+}
+.rodape {
+ background-color: aqua;
+ text-align: center;
+ font-size: 20px;
+ width: 100%;
+ height: 10%;
+ font-weight: bold;
+}
+</style>
+<script> //  configurar video, sexta-feira, 06/08/2021 das 22:30:00  as 22:55:00 h +|- 
+     function configurarVideo(id) {
+       const video = document.getElementById(id)
+       video.oncontextmenu = () => false
+      
+        document.querySelector(`[wm-play=${id}]`).onclick = e => video.play()
+        document.querySelector(`[wm-pause=${id}`).onclick = e => video.pause()
+        
+        setInterval(() =>{
+          const percentual = (video.currentTime / video.duration) * 100 
+           const valorDiv = document.querySelector(`[wm-progresso=${id}] > div`)
+           valorDiv.style.width = `${percentual}%`
+           valorDiv.innerHTML = `${percentual.toFixed(1)}%`
+        }, 500)
+     }
+      configurarVideo('meuvideo')
+
+</script>
+<footer>
+ <marquee> html,css e Javascript no curso de Web Moderno seja bem vindo...   </marquee>
+ <div class="rodape"> 
+     Alktecnologia-André Luis Kunert-2021 
+
+            
+       
+            </div>
+     
+</footer>
+</html>
+

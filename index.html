@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+ <html lang="tp-br">
+     <head>
+         <title> Analisando os assuntos </title>
+         <meta charset="utf-8">
+         <link rel="stylesheet" type="text/css" href="estilo.css">
+         
+        </head>
+   <header>
+    <marquee> html,css e Javascript no curso de Web Moderno seja bem vindo...   </marquee>
+
+   </header>
+   <body>
+          <h2>exercicios</h2>
+           <br>
+           <h4> Nesta pagina web tu teras acesso aos exercicios....
+           </h4>
+       <h5>
+    <Nav>
+        <a href="exercicios/teste.html">01-Anatomia Tag</a> <br>
+        <a href="exercicios/teste.html">02-exercicio {temp}</a> <br>
+        <a href="exercicios/textopuro.html">03-texto puro</a> <br>
+         <a href="exercicios/tags01.html">04-tag1</a> <br>
+         <a href="exercicios/tags_2.html">05-tag2</a> <br>
+         <a href="exercicios/listas.html">06-listas</a> <br>
+         <a href="exercicios/lista_alinhada.html">06-lista_alinhada</a> <br>
+         <a href="exercicios/links.html">07-links_#01</a> <br>
+         <a href="exercicios/tabela.html"> 08-tabela </a> <br>
+         <a href="exercicios/form/form.html">09- formulario </a> <br>
+         <a href="exercicios/imagens.html"> 10-imagens </a> <br>
+         <a href="exercicios/video.html"> 11-vídeos </a> <br>
+         <a href="exercicios/tags_nao_visual.html"> 12- Tags não visual  </a> <br>
+
+         
+
+          
+     
+        
+
+
+         </Nav>
+          <section class="conteudo"> 
+          
+          </section>
+          <script>
+                document.querySelectorAll('a').forEach(links => {
+                   link.onclik = function(e) {
+                     e.preventDefault() 
+                     const conteudo = document.getElementById('conteudo')
+                     fetch(link.href)
+                     .then(resp => resp.text())
+                     .then(html => conteudo.innerHTML =  html)
+                   }
+                })
+          </script>
+        </p>
+         </h5>
+   </header>
+      
+      </section>
+      
+     </h5>
+     <aside class="texto1" > 
+      <br>
+      <h4>
+       <a href="entendo_paginas_web.html"> pagina </a> web inicial,esse link levara para a pagina web inicial desse curso ..
+      </h4>
+     </aside>
+
+   </body>
+   <footer>
+    <marquee> html,css e Javascript no curso de Web Moderno seja bem vindo...   </marquee>
+    <div class="rodape"> 
+        Alktecnologia-André Luis Kunert-2021 
+
+               
+          
+               </div>
+        
+   </footer>
+ </html>
+
